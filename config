@@ -182,7 +182,7 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 bindsym $mod+d exec rofi -show run # open rofi instead of i3wm
 bindsym $mod+Ctrl+l exec bash ~/i3lock-color/lock.sh # lock screen
 bindsym $mod+Ctrl+x exec bash ~/i3lock-color/lock.sh && systemctl suspend # lock screen and suspend session
-bindsym Print exec scrot ~/Pictures/%b%d_%H-%M-%S.png # take screenshot
+bindsym Print exec scrot ~/Pictures/screen/%b%d_%H-%M-%S.png # take screenshot
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% # increase sound volume
