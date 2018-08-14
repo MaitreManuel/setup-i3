@@ -190,8 +190,8 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% # decrease sound v
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /home/trystan/.config/i3/toggletouchpad.sh # toggle touchpad

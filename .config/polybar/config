@@ -19,6 +19,10 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 info = #0a6cf5
+blue = #2ecfff
+amber = #ffb642
+green = #1aff80
+white = #c0ffff
 
 [global/wm]
 margin-top = 5
@@ -51,7 +55,16 @@ font-2 = Font Awesome 5 Brands:fontformat=truetype:size=14;3
 
 modules-left = i3
 modules-center = cpu date memory
-modules-right = spotify volume battery
+modules-right = spotify backlight battery volume
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+
+format = <label>
+format-underline = ${colors.white}
+label = %percentage%% 
+label-padding = 2
 
 [module/battery]
 type = internal/battery
@@ -64,12 +77,12 @@ format-charging-underline = #0a6cf5
 format-charging-padding = 2
 
 format-discharging = <label-discharging>  <ramp-capacity>
-format-discharging-underline = #ffb52a
+format-discharging-underline = ${colors.amber}
 format-discharging-padding = 2
 
 format-full = <label-full>  <ramp-capacity>
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = #55aa55
+format-full-underline = ${colors.green}
 format-full-padding = 2
 
 ramp-capacity-0 = 
@@ -126,19 +139,6 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %time%  %date%
 label-padding = 2
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-mount-1 = /home
-mount-2 = /invalid/mountpoint
-
-label-mounted = %mountpoint%: %percentage_free%%
-
-label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
@@ -202,7 +202,9 @@ type = internal/volume
 format-volume = <label-volume>  <ramp-volume>
 label-volume-foreground = ${root.foreground}
 format-volume-underline = #0a6cf5
+format-muted-underline = #6600cc
 format-volume-padding = 2
+format-muted-padding = 2
 
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = 
