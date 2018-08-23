@@ -14,6 +14,7 @@ foreground = #dfdfdf
 foreground-alt = #55
 intel = #0071c5
 nvidia = #76b900
+redshift = #d08770
 spotify = #1db954
 primary = #ffb52a
 secondary = #e60053
@@ -49,12 +50,12 @@ border-color = transparent
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Liberaton Sans:pixelsize=14;3
-font-1 = Font Awesome 5 Pro:fontformat=truetype:size=14;3
-font-2 = Font Awesome 5 Brands:fontformat=truetype:size=14;3
+font-0 = Liberaton Sans:pixelsize=12;4
+font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;4
+font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;4
 
 modules-left = i3
-modules-center = cpu date memory
+modules-center = cpu temperature date memory
 modules-right = spotify backlight battery volume
 
 [module/backlight]
@@ -123,6 +124,7 @@ format = <label>
 format-underline = ${colors.intel}
 label = %percentage%%  
 label-padding = 2
+label-padding-right = 0
 
 [module/date]
 type = internal/date
@@ -182,6 +184,13 @@ format = <label>
 format-underline = ${colors.nvidia}
 label = %percentage_used%%  
 
+[module/redshift]
+type = custom/script
+exec = ~/.config/polybar/scripts/redshift.sh
+interval = 1
+format-underline = ${colors.redshift}
+format-padding = 2
+
 [section/spotifyStyle]
 format-underline = ${colors.spotify}
 format-padding = 2
@@ -195,6 +204,15 @@ click-left = playerctl -p spotify play-pause
 label = %output:0:30:...%
 format = <label>
 interval = 1
+
+[module/temperature]
+type = custom/script
+exec = ~/.config/polybar/scripts/temperature.sh
+interval = 0.5
+label = %output:0:30:...%  
+format = <label>
+format-underline = ${colors.intel}
+format-padding = 2
 
 [module/volume]
 type = internal/volume
