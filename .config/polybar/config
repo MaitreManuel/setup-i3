@@ -51,8 +51,8 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Liberaton Sans:pixelsize=12;4
-font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;4
-font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;4
+font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;3
+font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
 modules-center = cpu temperature date memory
