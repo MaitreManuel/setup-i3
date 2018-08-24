@@ -117,6 +117,12 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+[module/compton]
+type = custom/script
+exec = ~/.config/polybar/scripts/compton.sh
+interval = 1
+click-left = ~/.config/polybar/scripts/compton.sh --toggle
+
 [module/cpu]
 type = internal/cpu
 interval = 0.5
