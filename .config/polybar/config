@@ -55,7 +55,7 @@ font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;3
 font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
-modules-center = cpu temperature date memory
+modules-center = cpu temperature calendar memory
 modules-right = spotify backlight battery volume
 
 [module/backlight]
@@ -126,21 +126,11 @@ label = %percentage%%  
 label-padding = 2
 label-padding-right = 0
 
-[module/date]
-type = internal/date
+[module/calendar]
+type = custom/script
+exec = ~/.config/polybar/scripts/calendar.sh
 interval = 1
-
-date-fontformat = 2
-date-alt = " %d/%m/%Y"
-
-time = %H:%M:%S
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-
-label = %time%  %date%
-label-padding = 2
+click-left = ~/.config/polybar/scripts/calendar.sh --popup
 
 [module/i3]
 type = internal/i3
