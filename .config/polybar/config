@@ -55,7 +55,7 @@ font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;3
 font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
-modules-center = cpu temperature calendar memory
+modules-center = temperature cpu calendar memory fan
 modules-right = spotify backlight battery volume
 
 [module/backlight]
@@ -130,7 +130,6 @@ format = <label>
 format-underline = ${colors.intel}
 label = %percentage%%  
 label-padding = 2
-label-padding-right = 0
 
 [module/calendar]
 type = custom/script
@@ -172,6 +171,15 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 
+[module/fan]
+type = custom/script
+exec = ~/.config/polybar/scripts/fan.sh
+interval = 0.5
+label = %output:0:30:...%  
+format = <label>
+format-underline = ${colors.alert}
+format-padding = 2
+
 [module/memory]
 type = internal/memory
 interval = 0.5
@@ -207,7 +215,7 @@ exec = ~/.config/polybar/scripts/temperature.sh
 interval = 0.5
 label = %output:0:30:...%  
 format = <label>
-format-underline = ${colors.intel}
+format-underline = ${colors.alert}
 format-padding = 2
 
 [module/volume]
