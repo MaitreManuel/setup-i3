@@ -6,7 +6,7 @@ if [ "$(pgrep -x redshift)" ]; then
     if [ -z "$temp" ]; then
         echo "%{F#0066ff}  "
     elif [ "$temp" -ge 5000 ]; then
-        echo "%{F#66ff66}  "
+        echo "%{F#00cc00}  "
     elif [ "$temp" -ge 4000 ]; then
         echo "%{F#ff9933}  "
     else

@@ -55,8 +55,8 @@ font-1 = Font Awesome 5 Pro:fontformat=truetype:size=12;3
 font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
-modules-center = temperature cpu calendar memory fan
-modules-right = spotify backlight battery volume redshift
+modules-center = calendar
+modules-right = spotify backlight battery volume cpu memory temperature redshift
 
 [module/backlight]
 type = internal/backlight
@@ -191,7 +191,7 @@ label = %percentage_used%%  
 [module/redshift]
 type = custom/script
 exec = ~/.config/polybar/scripts/redshift.sh
-interval = 1
+interval = 5
 format-padding = 2
 
 [section/spotifyStyle]
@@ -212,9 +212,8 @@ interval = 1
 type = custom/script
 exec = ~/.config/polybar/scripts/temperature.sh
 interval = 0.5
-label = %output:0:30:...%  
+label = %output:0:30:...%
 format = <label>
-format-underline = ${colors.alert}
 format-padding = 2
 
 [module/volume]
