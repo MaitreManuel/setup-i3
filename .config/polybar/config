@@ -56,7 +56,7 @@ font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
 modules-center = calendar
-modules-right = spotify backlight battery volume cpu memory temperature redshift
+modules-right = spotify backlight battery cpu memory volume temperature redshift
 
 [module/backlight]
 type = internal/backlight
@@ -222,7 +222,6 @@ type = internal/volume
 format-volume = <label-volume>  <ramp-volume>
 label-volume-foreground = ${root.foreground}
 format-volume-underline = ${colors.info}
-format-muted-underline = ${colors.purple}
 format-volume-padding = 2
 format-muted-padding = 2
 
