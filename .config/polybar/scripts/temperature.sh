@@ -2,7 +2,7 @@
 
 if [ "$(pgrep -x redshift)" ]; then
     temp=$(sensors | grep Core | awk '{print substr($3, 2, length($3)-6)}' | head -n 1)
-
+    
     if [ "$temp" -lt 25 ]; then
       echo "%{F#0066ff}"
     elif [ "$temp" -ge 25 ] && [ "$temp" -lt 50 ]; then

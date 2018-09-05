@@ -11,7 +11,7 @@
 background = #1e2529
 background-alt = #e6ee
 foreground = #dfdfdf
-foreground-alt = #55
+foreground-alt = #555555
 intel = #0071c5
 nvidia = #76b900
 redshift = #d08770
@@ -56,16 +56,15 @@ font-2 = Font Awesome 5 Brands:fontformat=truetype:size=12;3
 
 modules-left = i3
 modules-center = calendar
-modules-right = spotify backlight battery cpu memory volume temperature redshift
+modules-right = spotify battery volume backlight cpu memory temperature redshift
 
 [module/backlight]
-type = internal/backlight
-card = intel_backlight
-
+type = custom/script
+exec = ~/.config/polybar/scripts/light.sh
+interval = 0.5
+label = %output:0:30:...%
 format = <label>
-format-underline = ${colors.white}
-label = %percentage%%  
-label-padding = 2
+format-padding = 2
 
 [module/battery]
 type = internal/battery
@@ -91,12 +90,6 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
 [module/bspwm]
 type = internal/bspwm
@@ -124,12 +117,12 @@ interval = 1
 click-left = ~/.config/polybar/scripts/compton.sh --toggle
 
 [module/cpu]
-type = internal/cpu
+type = custom/script
+exec = ~/.config/polybar/scripts/cpu.sh
 interval = 0.5
+label = %output:0:30:...%
 format = <label>
-format-underline = ${colors.intel}
-label = %percentage%%  
-label-padding = 2
+format-padding = 2
 
 [module/calendar]
 type = custom/script
@@ -171,22 +164,13 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 
-[module/fan]
-type = custom/script
-exec = ~/.config/polybar/scripts/fan.sh
-interval = 0.5
-label = %output:0:30:...%  
-format = <label>
-format-underline = ${colors.alert}
-format-padding = 2
-
 [module/memory]
-type = internal/memory
+type = custom/script
+exec = ~/.config/polybar/scripts/memory.sh
 interval = 0.5
-label-padding = 2
+label = %output:0:30:...%
 format = <label>
-format-underline = ${colors.nvidia}
-label = %percentage_used%%  
+format-padding = 2
 
 [module/redshift]
 type = custom/script
