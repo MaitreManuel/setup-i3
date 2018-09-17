@@ -168,6 +168,7 @@ bindsym $mod+r mode "resize"
 
 # set-up load environment
 exec --no-startup-id "compton -f --config ~/.config/compton.conf" # set compton
+exec_always --no-startup-id sh ~/.config/i3/dual_screen.sh
 exec_always killall -q dunst # kill native notification
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc # launch alternative notification
 exec_always --no-startup-id "redshift" # launch redshift
@@ -184,6 +185,7 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
 # Custom shortcut
 bindsym $mod+d exec rofi -show run # open rofi instead of i3wm
+bindsym $mod+Ctrl+c exec sh ~/.config/i3/dual_screen.sh
 bindsym $mod+Ctrl+l exec bash ~/.config/i3/beautify_lock.sh # lock screen
 bindsym $mod+Ctrl+x exec bash ~/.config/i3/beautify_lock.sh && systemctl suspend # lock screen and suspend session
 bindsym Print exec gnome-screenshot -i # take screenshot
