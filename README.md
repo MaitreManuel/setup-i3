@@ -1,5 +1,7 @@
 # Ubuntu 16.04 (Xenial Xerus) + i3
 
+Bonus folder memes !
+
 ## Display
 
 Current laptop : Dell XPS 15 9560
