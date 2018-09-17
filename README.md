@@ -2,6 +2,8 @@
 
 ## Display
 
+Current laptop : Dell XPS 15 9560
+
 ![Screenshot](workspace.png)
 
 # Configuration
