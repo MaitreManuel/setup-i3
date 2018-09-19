@@ -12,8 +12,6 @@ Current laptop : Dell XPS 15 9560
 
 ## Compton
 
-For animations & transparency
-
 Compton is a standalone compositor for Xorg, suitable for use with window managers that do not provide compositing.
 
 ```
