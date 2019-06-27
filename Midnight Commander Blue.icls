@@ -1,28 +1,28 @@
 <scheme name="Midnight Commander Blue" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2018-09-17T11:41:05</property>
+    <property name="created">2018-08-08T10:56:25</property>
     <property name="ide">PhpStorm</property>
-    <property name="ideVersion">2018.2.3.0.0</property>
-    <property name="modified">2018-09-17T11:41:11</property>
-    <property name="originalScheme">Midnight Commander Blue</property>
+    <property name="ideVersion">2018.2.0.0</property>
+    <property name="modified">2018-08-13T10:12:54</property>
+    <property name="originalScheme">_@user_Cobalt</property>
   </metaInfo>
   <option name="LINE_SPACING" value="1.15" />
   <option name="EDITOR_FONT_SIZE" value="12" />
-  <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+  <option name="EDITOR_FONT_NAME" value="Roboto Mono for Powerline" />
   <option name="EDITOR_LIGATURES" value="true" />
   <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
   <option name="CONSOLE_LINE_SPACING" value="1.2" />
   <colors>
     <option name="CARET_COLOR" value="ffffff" />
-    <option name="CARET_ROW_COLOR" value="4f336a" />
+    <option name="CARET_ROW_COLOR" value="b48666" />
     <option name="CONSOLE_BACKGROUND_KEY" value="2240" />
     <option name="FOLDED_TEXT_BORDER_COLOR" value="f8e9c0" />
     <option name="GUTTER_BACKGROUND" value="61a71" />
     <option name="INDENT_GUIDE" value="25425c" />
     <option name="LINE_NUMBERS_COLOR" value="ffffff" />
     <option name="SELECTED_INDENT_GUIDE" value="25425c" />
-    <option name="SELECTION_BACKGROUND" value="a95bd3" />
+    <option name="SELECTION_BACKGROUND" value="85533a" />
     <option name="WHITESPACES" value="25425c" />
   </colors>
   <attributes>
@@ -328,6 +328,12 @@
         <option name="FOREGROUND" value="754200" />
       </value>
     </option>
+    <option name="CSS.COMMENT">
+      <value>
+        <option name="FOREGROUND" value="88ff" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="CSS.FUNCTION">
       <value>
         <option name="FOREGROUND" value="ffb054" />
@@ -336,6 +342,11 @@
     <option name="CSS.IDENT">
       <value>
         <option name="FOREGROUND" value="ffdd00" />
+      </value>
+    </option>
+    <option name="CSS.NUMBER">
+      <value>
+        <option name="FOREGROUND" value="ff628c" />
       </value>
     </option>
     <option name="CSS.PROPERTY_NAME">
@@ -662,7 +673,7 @@
     </option>
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="aca35" />
+        <option name="FOREGROUND" value="1d7c54" />
       </value>
     </option>
     <option name="DEFAULT_TAG">
@@ -922,6 +933,12 @@
       <value>
         <option name="FOREGROUND" value="3ad900" />
         <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="HTML_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="88ff" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="HTML_ENTITY_REFERENCE">
@@ -1690,7 +1707,12 @@
         <option name="FOREGROUND" value="3ad900" />
       </value>
     </option>
-    <option name="SASS_COMMENT" baseAttributes="CSS.COMMENT" />
+    <option name="SASS_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="88ff" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="SASS_DEFAULT">
       <value>
         <option name="FOREGROUND" value="ff9d00" />
@@ -1724,6 +1746,11 @@
     <option name="SASS_MIXIN">
       <value>
         <option name="FOREGROUND" value="ffdd00" />
+      </value>
+    </option>
+    <option name="SASS_NUMBER">
+      <value>
+        <option name="FOREGROUND" value="ff628c" />
       </value>
     </option>
     <option name="SASS_PROPERTY_NAME">

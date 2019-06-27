@@ -1,4 +1,4 @@
-# Ubuntu 16.04 (Xenial Xerus) + i3
+# Manjaro i3
 
 Bonus folder memes !
 

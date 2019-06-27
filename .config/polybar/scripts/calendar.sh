@@ -3,7 +3,7 @@
 YAD_WIDTH=200
 YAD_HEIGHT=200
 BOTTOM=false
-DATE="$(date +"%d/%m/%y %H:%M:%S")"
+DATE="$(date +"%d.%m %H:%M")"
 
 case "$1" in
     --popup)

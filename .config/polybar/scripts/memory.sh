@@ -11,16 +11,16 @@ if [ "$(pgrep -x redshift)" ]; then
     fi
 
     if [ "$temp" -lt 25 ]; then
-      echo "%{F#0066ff}"
+      echo "%{F#0066ff} "
     elif [ "$temp" -ge 25 ] && [ "$temp" -lt 50 ]; then
-      echo "%{F#00cc00}"
+      echo "%{F#00cc00} "
     elif [ "$temp" -ge 50 ] && [ "$temp" -lt 75 ]; then
-      echo "%{F#ffff00}"
+      echo "%{F#ffff00} "
     elif [ "$temp" -ge 75 ] && [ "$temp" -lt 90 ]; then
-      echo "%{F#ff9933}"
+      echo "%{F#ff9933} "
     elif [ "$temp" -ge 90 ]; then
-      echo "%{F#ff3300}"
+      echo "%{F#ff3300} "
     else
-      echo ""
+      echo " "
     fi
 fi

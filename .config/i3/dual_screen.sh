@@ -21,7 +21,6 @@ main () {
   fi
 
   echo 'end'
-  restart
 }
 
-main "$@"
+main "@"
