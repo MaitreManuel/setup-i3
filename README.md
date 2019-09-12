@@ -4,7 +4,7 @@ Bonus folder memes !
 
 ## Display
 
-Current laptop : Dell XPS 15 9560
+Current laptop : Lenovo Thinkpad E550
 
 ![Screenshot](workspace.png)
 
@@ -18,7 +18,7 @@ Compton is a standalone compositor for Xorg, suitable for use with window manage
 cp setup-i3/.config/compton.conf ~/.config/compton.conf
 ```
 
-## Dunst
+## Dunst 
 
 A lightweight replacement for the notification-daemons 
 
@@ -26,7 +26,7 @@ A lightweight replacement for the notification-daemons
 cp setup-i3/.config/dunst/dunstrc ~/.config/dunst/dunstrc
 ```
 
-## Gaps
+## Gaps (for Ubuntu only)
 
 i3 with more features.
 
@@ -76,7 +76,7 @@ A PHP IDE for working with a lot of web programming langages and frameworks.
 * Color Scheme  : Midnight Commander Blue (home made)
 * Theme         : Material UI
 
-## Polybar
+## Polybar  (for Ubuntu only)
 
 A fast and easy-to-use status bar.
 
@@ -133,7 +133,7 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 ```
 
-## Rofi
+## Rofi  (for Ubuntu only)
 
 A window switcher, application launcher and dmenu replacement.
 
@@ -142,7 +142,7 @@ sudo apt-get install rofi
 cp setup-i3/.Xresources ~/.Xresources
 ```
 
-## Sound
+## Sound  (for Ubuntu only)
 
 A great way to improve the overall sound quality on Linux.
 
