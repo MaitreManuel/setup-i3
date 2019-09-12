@@ -45,8 +45,10 @@ bindsym $mod+x exec bash ~/.i3/beautify_lock.sh && sleep 2s && systemctl suspend
 # bindsym $mod+Ctrl+l exec bash i3exit logout
 
 # setup on load
-exec_always --no-startup-id "redshift -l 47.2382007:-1.6300958"
+exec_always --no-startup-id "redshift -l 47.2723799:-1.6140509"
 exec_always --no-startup-id "sh ~/.i3/dual_screen.sh"
+exec_always --no-startup-id "numlockx on"
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/fallout.png"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -71,15 +73,15 @@ bindsym XF86AudioPrev exec playerctl previous
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
+# bindsym XF86MonBrightnessUp exec light -A 5
+# bindsym XF86MonBrightnessDown exec light -U 5
 
 
 # Start Applications
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-# bindsym $mod+F2 exec chromium
+# bindsym $mod+F2 exec google-chrome-stable
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec gksu pcmanfm
