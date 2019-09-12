@@ -11,7 +11,7 @@ if [ "$(pgrep -x spotify)" ]; then
     icon=
   fi
 
-  echo "$icon '' $title - $artist"
+  echo $icon '' $title - $artist
 else
   echo "Bug"
 fi
