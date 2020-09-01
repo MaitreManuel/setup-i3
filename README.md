@@ -4,8 +4,7 @@ Bonus folder memes !
 
 ## Display
 
-Current laptop : Lenovo Thinkpad E550
-
+Current laptop : Dell XPS 15 7590
 ![Screenshot](workspace.png)
 
 # Configuration
