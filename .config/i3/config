@@ -45,10 +45,11 @@ bindsym $mod+x exec bash ~/.i3/beautify_lock.sh && sleep 2s && systemctl suspend
 # bindsym $mod+Ctrl+l exec bash i3exit logout
 
 # setup on load
-exec_always --no-startup-id "redshift -l 47.2723799:-1.6140509"
+# exec_always --no-startup-id "redshift -l 47.2723799:-1.6140509"
+# exec_always --no-startup-id "numlockx on"
 exec_always --no-startup-id "sh ~/.i3/dual_screen.sh"
-exec_always --no-startup-id "numlockx on"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/fallout.png"
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/synth.jpg"
+exec_always --no-startup-id "xinput --set-prop 'MOSART Semi. 2.4G Wireless Mouse' 'libinput Accel Speed' -1 &"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -61,9 +62,9 @@ exec --no-startup-id volumeicon
 # bindsym $mod+Ctrl+m exec pavucontrol
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% # increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% # decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
