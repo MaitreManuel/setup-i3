@@ -8,25 +8,27 @@
 ;=====================================================
 
 [colors]
+#primary = #dfdfdf
+#secondary = #e60053
+#alert = #bd2c40
 background = #77000000
 background-alt = #e6ee
-foreground = #dfdfdf
-foreground-alt = #555555
+foreground = #2e2157
+foreground-alt = #241734
 intel = #0071c5
 nvidia = #76b900
 redshift = #d08770
 spotify = #1db954
-#primary = #ffb52a
-primary = #dfdfdf
-secondary = #e60053
-alert = #bd2c40
+primary = #920075
+secondary = #2de2e6
+alert = #fd1d53
 success = #55aa55
 purple = #6600cc
 info = #0a6cf5
 blue = #2ecfff
 amber = #ffb642
 green = #1aff80
-white = #c0ffff
+white = #dfdfdf
 
 [global/wm]
 margin-top = 5
@@ -34,12 +36,12 @@ margin-left = 5
 margin-bottom = 5
 
 [bar/default]
-monitor = eDP1
+monitor = eDP-1
 width = 100%
 height = 50
 bottom = false
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.white}
 
 overline-size = 2
 underline-size = 2
@@ -94,7 +96,7 @@ ramp-capacity-4 = 
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.white}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
@@ -138,10 +140,10 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 4
-label-mode-foreground = #000
+label-mode-foreground = #dfdfdf
 label-mode-background = ${colors.primary}
 
-label-focused = %{F#000000}%icon%%{F-}
+label-focused = %{F#dfdfdf}%icon%%{F-}
 label-focused-background = ${colors.primary}
 label-focused-padding = 4
 
@@ -235,7 +237,7 @@ format = <label>
 format-padding = 1
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 format-volume = <label-volume>  <ramp-volume>
 label-volume-foreground = ${root.foreground}
