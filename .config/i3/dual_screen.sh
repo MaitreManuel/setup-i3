@@ -1,22 +1,24 @@
 #!/bin/sh
 
 main () {
-  hdmi_plug=$(xrandr --current | grep '^HDMI-1 connected')
-  typec_plug=$(xrandr --current | grep '^DP-1 connected')
+  dp1_plug=$(xrandr --current | grep '^DP-1 connected')
+  dp2_plug=$(xrandr --current | grep '^DP-2 connected')
+  dp3_plug=$(xrandr --current | grep '^DP-3 connected')
 
-  if [ "$hdmi_plug" = "" ] && [ "$typec_plug" = "" ]; then
-    echo "hdmi and typec plug off"
+  if [ "$dp1_plug" != "" ] && [ "$dp3_plug" != "" ]; then
+    echo "DP1 & DP3 plug on"
+    xrandr --output DP-1 --auto --left-of DP-3 --output DP-3 --auto --above eDP-1 --output eDP-1 --auto
+  elif [ "$dp1_plug" = "" ] && [ "$dp3_plug" = "" ]; then
+    echo "DP1 and DP3 plug off"
     xrandr --auto
-  elif [ "$hdmi_plug" != "" ]  && [ "$typec_plug" = "" ]; then
-    echo "hdmi plug on"
-    xrandr --output HDMI-1 --above eDP-1 --auto
-    i3-msg "workspace 10, move workspace to output HDMI-1"
-  elif [ "$hdmi_plug" = "" ]  && [ "$typec_plug" != "" ]; then
-    echo "typec plug on"
-    xrandr --output DP-1 --above eDP-1 --auto
-    i3-msg "workspace 9, move workspace to output DP-1"
+  elif [ "$dp1_plug" != "" ]  && [ "$dp3_plug" = "" ]; then
+    echo "DP1 plug on"
+    xrandr --output DP-1 --auto --above eDP-1 --output eDP-1 --auto
+  elif [ "$dp1_plug" = "" ]  && [ "$dp3_plug" != "" ]; then
+    echo "DP3 plug on"
+    xrandr --output DP-3 --auto --above eDP-1 --output eDP-1 --auto
   else
-    echo "something goes wrong"
+    echo "something went wrong"
     xrandr --auto
   fi
 
