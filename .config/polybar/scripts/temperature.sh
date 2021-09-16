@@ -3,15 +3,15 @@
 temp=$(sensors | grep Core | awk '{print substr($3, 2, length($3)-5)}' | head -n 1)
 
 if [ "$temp" -lt 25 ]; then
-  echo "%{F#0066ff} "
+  echo "%{F#000080}$temp *C  "
 elif [ "$temp" -ge 25 ] && [ "$temp" -lt 50 ]; then
-  echo "%{F#00cc00} "
+  echo "%{F#008000}$temp *C  "
 elif [ "$temp" -ge 50 ] && [ "$temp" -lt 75 ]; then
-  echo "%{F#ffff00} "
+  echo "%{F#808000}$temp *C  "
 elif [ "$temp" -ge 75 ] && [ "$temp" -lt 90 ]; then
-  echo "%{F#ff9933} "
+  echo "%{F#aa5f00}$temp *C  "
 elif [ "$temp" -ge 90 ]; then
-  echo "%{F#ff3300} "
+  echo "%{F#800000}$temp *C  "
 else
-  echo " "
+  echo "$temp *C "
 fi
