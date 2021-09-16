@@ -48,7 +48,7 @@ bindsym $mod+x exec bash ~/.i3/beautify_lock.sh && sleep 2s && systemctl suspend
 # exec_always --no-startup-id "redshift -l 47.2723799:-1.6140509"
 # exec_always --no-startup-id "numlockx on"
 exec_always --no-startup-id "sh ~/.i3/dual_screen.sh"
-exec_always --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/synth.jpg"
+exec_always --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/windows_95.png"
 exec_always --no-startup-id "xinput --set-prop 'MOSART Semi. 2.4G Wireless Mouse' 'libinput Accel Speed' -1 &"
 
 ################################################################################################
@@ -74,8 +74,8 @@ bindsym XF86AudioPrev exec playerctl previous
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
+bindsym XF86MonBrightnessUp exec "ybacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "ybacklight -dec 10"
 # bindsym XF86MonBrightnessUp exec light -A 5
 # bindsym XF86MonBrightnessDown exec light -U 5
 
@@ -321,7 +321,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
@@ -363,14 +363,13 @@ set_from_resource $term_color15    color15
 exec_always --no-startup-id "killall polybar; polybar -r default"
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
+## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	bar {
 #		i3bar_command i3bar
 #		status_command i3status
 #		position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+#	  tray_output primary
+#	  tray_output eDP1
 #
 #		bindsym button4 nop
 #		bindsym button5 nop
