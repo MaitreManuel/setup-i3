@@ -15,6 +15,7 @@ border-inner = #aaaaaa
 border-outer = #ecf0f1
 font = #000000
 font-active = #ffffff
+urgent = #800000
 
 [bar/default]
 bottom = true
@@ -36,7 +37,7 @@ font-1 = "Font Awesome 5 Pro-Solid-900:fontformat=truetype:size=14;4"
 font-2 = "Font Awesome 5 Brands:fontformat=truetype:size=14;4"
 
 modules-left = powermenu i3
-modules-right = spotify temperature battery volume calendar
+modules-right = spotify temperature light battery volume calendar
 
 # ******************************************************************************************************************************************* #
 # **************************************************************** POWERMENU **************************************************************** #
@@ -99,7 +100,7 @@ label-unfocused-padding = 2
 label-unfocused-margin = 1
 
 label-urgent = %{F#ffffff}%icon%%{F-}
-label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-background = ${colors.urgent}
 label-urgent-padding = 2
 label-urgent-margin = 1
 
@@ -109,15 +110,15 @@ label-visible-padding = 2
 label-visible-margin = 1
 
 ws-icon-0 = 1;  Internet
-ws-icon-1 = 2;  Éditeur
+ws-icon-1 = 2;  Editor
 ws-icon-2 = 3;  Terminal
-ws-icon-3 = 4;  Mail
+ws-icon-3 = 4;  Mails
 ws-icon-4 = 5;  Spotify
-ws-icon-5 = 6;  Config 1
-ws-icon-6 = 7;  Config 2
-ws-icon-7 = 8;  Config 3
-ws-icon-8 = 9;  Écran 2
-ws-icon-9 = 10;  Écran 3
+ws-icon-5 = 6;  Settings 1
+ws-icon-6 = 7;  Settings 2
+ws-icon-7 = 8;  Settings 3
+ws-icon-8 = 9;  Screen 2
+ws-icon-9 = 10;  Screen 3
 
 # ******************************************************************************************************************************************* #
 # **************************************************************** TEMPERATURE ************************************************************** #
@@ -130,12 +131,15 @@ label = %output:0:30:...%
 format = <label>
 format-padding = 1
 
-[module/backlight]
+# ******************************************************************************************************************************************* #
+# **************************************************************** LIGHT ************************************************************** #
+
+[module/light]
 type = custom/script
 exec = ~/.config/polybar/scripts/light.sh
 interval = 0.5
 label = %output:0:30:...%
-format = <label>
+format = |    <label>
 format-padding = 1
 
 # ******************************************************************************************************************************************* #
