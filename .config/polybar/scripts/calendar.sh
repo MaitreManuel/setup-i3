@@ -2,7 +2,7 @@
 
 YAD_WIDTH=200
 YAD_HEIGHT=200
-BOTTOM=false
+BOTTOM=true
 DATE="$(date +"%H:%M")"
 
 case "$1" in
@@ -10,8 +10,8 @@ case "$1" in
         eval "$(xdotool getmouselocation --shell)"
 
         if [ $BOTTOM = true ]; then
-            : $(( pos_y = Y - YAD_HEIGHT - 20 ))
-            : $(( pos_x = X - (YAD_WIDTH / 2) ))
+            : $(( pos_y = Y - YAD_HEIGHT - 41 ))
+            : $(( pos_x = X - YAD_WIDTH - 14 ))
         else
             : $(( pos_y = Y + 20 ))
             : $(( pos_x = X - (YAD_WIDTH / 2) ))
