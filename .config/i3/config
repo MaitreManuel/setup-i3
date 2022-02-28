@@ -41,15 +41,16 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 
 # lock screen
 bindsym $mod+l exec bash ~/.i3/beautify_lock.sh # lock screen
-bindsym $mod+x exec bash ~/.i3/beautify_lock.sh && sleep 2s && systemctl suspend # lock screen & suspend
+bindsym $mod+x exec bash ~/.i3/beautify_lock_silent.sh && sleep 2s && systemctl suspend # lock screen & suspend
 # bindsym $mod+Ctrl+l exec bash i3exit logout
 
 # setup on load
-# exec_always --no-startup-id "redshift -l 47.2723799:-1.6140509"
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # exec_always --no-startup-id "numlockx on"
 exec_always --no-startup-id "sh ~/.i3/dual_screen.sh"
 # exec_always --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/windows_95.png"
 exec_always --no-startup-id "xinput --set-prop 'MOSART Semi. 2.4G Wireless Mouse' 'libinput Accel Speed' -1 &"
+exec_always --no-startup-id "redshift-gtk & disown"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -251,6 +252,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Yad" title="yad-calendar"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
