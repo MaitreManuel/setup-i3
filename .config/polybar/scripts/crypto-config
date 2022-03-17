@@ -1,0 +1,6 @@
+[general]
+base_currency = EUR
+display = both
+
+[bitcoin]
+icon = 
