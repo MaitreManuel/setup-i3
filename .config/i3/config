@@ -50,7 +50,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec_always --no-startup-id "sh ~/.i3/dual_screen.sh"
 # exec_always --no-startup-id "feh --bg-scale ~/Pictures/Wallpapers/windows_95.png"
 exec_always --no-startup-id "xinput --set-prop 'MOSART Semi. 2.4G Wireless Mouse' 'libinput Accel Speed' -1 &"
-exec_always --no-startup-id "redshift-gtk & disown"
+# exec_always --no-startup-id "redshift-gtk & disown"
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
